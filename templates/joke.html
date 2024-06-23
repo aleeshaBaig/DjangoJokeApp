@@ -1,0 +1,15 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <title>Joke</title>
+</head>
+<body>
+    <h2>Here's your joke!</h2>
+    <p>{{ joke }}</p>
+    <a href="{% url 'logout' %}">Logout</a>
+    <form method="post" action="{% url 'joke' %}">
+        {% csrf_token %}
+        <button type="submit" name="new_joke" value="1">Get a new joke</button>
+    </form>
+</body>
+</html>
